@@ -1,0 +1,5 @@
+
+Minimum RTO for a single AZ outage: 1 minutes. Amazon estimates 60 - 120 seconds for a typical failover. Reference: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html
+Minimum RTO for a single region outage: 0 minutes. automatically failover to read replicas in another AZ seamlessly results in no data loss
+Minimum RPO for a single AZ outage: 1 minutes (1-10mins), promoting a read replica can take serveral minutes. Reference: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html
+Minimum RPO for a single region outage: 0 minutes, promoting a read replica is a async process, which results in no data loss/
